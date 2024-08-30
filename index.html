@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kejutan Romantis</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="intro">
+        <h1>Selamat datang!</h1>
+        <p>Masukkan namamu dan umurmu untuk memulai:</p>
+        <form id="form">
+          <input type="text" id="name" placeholder="Nama" required />
+          <input type="number" id="age" placeholder="Umur" required />
+          <button type="submit">Kirim</button>
+        </form>
+      </div>
+      <div id="message" class="hidden animate__animated">
+        <h1>Halo, <span id="userName"></span>!</h1>
+        <p>
+          Kehadiranmu telah membawa kebahagiaan dalam hidupku. Setiap momen
+          bersamamu terasa istimewa. Aku ingin menunjukkan betapa berartinya
+          kamu bagiku.
+        </p>
+        <button onclick="startQuiz()">Mulai permainan</button>
+      </div>
+      <div id="quiz" class="hidden animate__animated">
+        <h2>Quiz Romantis</h2>
+        <p>
+          Pilih jawaban yang paling menggugah hati untuk melihat kejutan
+          spesial:
+        </p>
+        <form id="quizForm">
+          <label>
+            <input type="radio" name="answer" value="A" />
+            A) "Apakah kamu percaya pada cinta pertama, atau aku perlu mencoba
+            lagi?" </label
+          ><br />
+          <label>
+            <input type="radio" name="answer" value="B" />
+            B) "Bolehkah aku menyebutmu milikku?" </label
+          ><br />
+          <label>
+            <input type="radio" name="answer" value="C" />
+            C) "Jika aku bisa memilih bintang di langit, aku akan menuliskan
+            namamu di sana." </label
+          ><br />
+          <label>
+            <input type="radio" name="answer" value="D" />
+            D) "Aku selalu memikirkanmu, bahkan dalam mimpi." </label
+          ><br />
+          <button type="button" onclick="checkAnswer()">Kirim Jawaban</button>
+        </form>
+        <p id="hint"></p>
+      </div>
+      <div id="surprise" class="hidden animate__animated">
+        <h2>Surprise!</h2>
+        <div id="loveMessage" class="hidden">
+          <svg
+            class="heart-svg"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="heartShape"
+              d="M50 75s-20-15-20-30a10 10 0 0 1 20-10 10 10 0 0 1 20 10c0 15-20 30-20 30z"
+              fill="none"
+              stroke="#e74c3c"
+              stroke-width="2"
+            />
+          </svg>
+          <div id="loveText"></div>
+        </div>
+        <p>
+          Ini adalah kejutan kecil yang ku siapkan hanya untukmu. Semoga ini
+          membuatmu tersenyum!
+        </p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

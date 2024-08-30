@@ -1,0 +1,132 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #f5a623,
+    #f2d0b0
+  ); /* Gradien warna dari oranye ke krem */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff; /* Warna teks tombol */
+  background-color: #e74c3c; /* Warna latar belakang tombol */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #c0392b;
+  transform: scale(1.1);
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: calc(100% - 24px);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #e74c3c;
+  outline: none;
+}
+
+form {
+  text-align: left;
+  display: inline-block;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  color: #333; /* Warna teks label */
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 10px 0;
+  color: #333; /* Warna teks judul */
+}
+
+p {
+  color: #555; /* Warna teks paragraf */
+  margin: 0;
+  padding: 10px 0;
+}
+
+#loveMessage {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e74c3c; /* Warna teks pesan */
+  margin: 20px 0;
+  display: inline-block;
+  position: relative;
+}
+
+.heart-svg {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  animation: drawHeart 2s forwards;
+}
+
+@keyframes drawHeart {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#loveText {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e74c3c; /* Warna teks cinta */
+  white-space: nowrap;
+}
+
+#hint {
+  color: #e67e22; /* Warna hint */
+  font-size: 16px;
+  margin-top: 10px;
+}
